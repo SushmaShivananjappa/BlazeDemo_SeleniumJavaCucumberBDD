@@ -13,7 +13,7 @@ import pages.BlazeDemo_FlightSelectPage;
 
 public class BlazeDemo_FlightsSelect {
 
-	public static WebDriver driver;
+	public static WebDriver driver = null;
 	public static BlazeDemo_FlightSelectPage selflgt;
 
 	@And("^user choose one of the flight for booking by clicking on Choose this flight button$")
