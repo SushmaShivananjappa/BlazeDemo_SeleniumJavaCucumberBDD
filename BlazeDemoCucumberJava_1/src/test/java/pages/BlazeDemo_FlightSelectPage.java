@@ -14,8 +14,8 @@ public class BlazeDemo_FlightSelectPage {
 
 	WebDriver driver1;
 	JavascriptExecutor js = (JavascriptExecutor)driver1;
-	
-//	By selFlight = By.xpath("//tbody/child::tr[1]/child::input[@value='43']/preceding-sibling::td[6]/input[@type='submit']");
+
+	//	By selFlight = By.xpath("//tbody/child::tr[1]/child::input[@value='43']/preceding-sibling::td[6]/input[@type='submit']");
 	By selFlight = By.xpath("//tbody/child::tr[1]/child::td[1]/input[@type='submit']");
 	By nav_purchase = By.xpath("@input[id='inputName']");
 
@@ -25,23 +25,23 @@ public class BlazeDemo_FlightSelectPage {
 
 
 	public Actions chooseFlight() {
-//		//		driver.findElement(selFlight).click();
-		
+		//		//		driver.findElement(selFlight).click();
+
 		Actions act = new Actions(driver1);
 		return act.click(driver1.findElement(selFlight)).clickAndHold().release();
-		
-//		//driver.findElement(selFlight).sendKeys(Keys.ENTER);
-//		driver1.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-//		System.out.println("user chose a Flight");
-//		return act;
+
+		//		//driver.findElement(selFlight).sendKeys(Keys.ENTER);
+		//		driver1.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		//		System.out.println("user chose a Flight");
+		//		return act;
 	}
-//		public void chooseFlight() {
-//			driver.findElement(selFlight).sendKeys(Keys.RETURN);
-//		driver1.findElement(selFlight).click();
-//			js.executeScript("arguments[0].click();",selFlight);
-//			driver1.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-//			System.out.println("User Chose a Flight");
-//		}
+	//		public void chooseFlight() {
+	//			driver.findElement(selFlight).sendKeys(Keys.RETURN);
+	//		driver1.findElement(selFlight).click();
+	//			js.executeScript("arguments[0].click();",selFlight);
+	//			driver1.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+	//			System.out.println("User Chose a Flight");
+	//		}
 
 	public void purCnfrLanding(){
 		driver1.findElement(nav_purchase).isDisplayed();

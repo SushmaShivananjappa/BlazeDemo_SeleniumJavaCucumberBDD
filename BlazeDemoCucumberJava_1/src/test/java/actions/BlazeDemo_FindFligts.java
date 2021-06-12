@@ -13,8 +13,8 @@ public class BlazeDemo_FindFligts {
 
 	public static WebDriver driver;
 	public static BlazeDemo_FindFligtsPage ref;
-	
-		
+
+
 	@Given("^The Web Browser is open$")
 	public void the_web_browser_is_open() throws Exception {
 		String project_loc = System.getProperty("user.dir");
@@ -25,7 +25,7 @@ public class BlazeDemo_FindFligts {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-	
+
 
 	}
 
@@ -36,7 +36,7 @@ public class BlazeDemo_FindFligts {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	}
 
-		
+
 	@Then("^the user lands on BlazeDemo page successfully$")
 	public void the_user_lands_on_blaze_demo_page_successfully() {
 
@@ -66,8 +66,8 @@ public class BlazeDemo_FindFligts {
 	public void user_is_navigated_to_flights_reserve_page() {
 		ref.confirmResPage();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-//		driver.close();
-//		driver.quit();
+		//		driver.close();
+		//		driver.quit();
 	}
 
 }

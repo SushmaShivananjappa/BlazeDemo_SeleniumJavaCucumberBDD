@@ -10,6 +10,13 @@ public class BlazeDemo_FindFligtsPage {
 
 	WebDriver driver;
 
+	public BlazeDemo_FindFligtsPage(WebDriver driver){
+		this.driver = driver;
+	}
+	
+/** creating locators
+ * 
+ */
 
 	By departure_list_FindFlights = By.name("fromPort");
 	By destination_list_FindFlights = By.name("toPort");
@@ -17,10 +24,10 @@ public class BlazeDemo_FindFligtsPage {
 	By nav_validation = By.xpath("//input[@value='Choose This Flight']");
 
 
-	public BlazeDemo_FindFligtsPage(WebDriver driver){
-		this.driver = driver;
-	}
-
+/**
+ * This method is to select departure city
+ * @param departure
+ */
 	public void selectDepCity(String departure) {
 		Select dep_city = new Select(driver.findElement(departure_list_FindFlights));
 		dep_city.selectByValue(departure);
@@ -28,6 +35,10 @@ public class BlazeDemo_FindFligtsPage {
 
 	}
 
+	/**
+	 * This method is to select destination city
+	 * @param destination
+	 */
 	public void selectDesCity(String destination) {
 		Select des_city = new Select(driver.findElement(destination_list_FindFlights));
 		des_city.selectByValue(destination);
